@@ -1,0 +1,64 @@
+{
+  "scope": "Educational retrospective baseline on completed loans; not a calibrated PD.",
+  "dataset_sha256": "fd8f691049750dced01c4e402879b61ef5611b95e9ba26c0335b839232e7c840",
+  "all_loans": 682,
+  "excluded_active_loans": 448,
+  "train": {
+    "rows": 175,
+    "bad": 27,
+    "first_loan_date": "1993-07-05",
+    "last_loan_date": "1996-08-22"
+  },
+  "holdout": {
+    "rows": 59,
+    "bad": 4,
+    "first_loan_date": "1996-09-11",
+    "last_loan_date": "1997-12-28"
+  },
+  "features": [
+    "loan_amount",
+    "loan_duration",
+    "account_tenure_days",
+    "preloan_avg_balance",
+    "preloan_min_balance",
+    "preloan_balance_std",
+    "preloan_negative_balance_ratio",
+    "preloan_transactions_per_month",
+    "preloan_monthly_inflow",
+    "preloan_monthly_outflow"
+  ],
+  "threshold": 0.5,
+  "logistic_regression": {
+    "roc_auc": 0.8818181818181818,
+    "average_precision": 0.6101190476190477,
+    "brier_score": 0.04721317634524333,
+    "precision_at_0_5": 1.0,
+    "recall_at_0_5": 0.5,
+    "confusion_matrix_tn_fp_fn_tp": [
+      55,
+      0,
+      2,
+      2
+    ]
+  },
+  "prior_baseline": {
+    "roc_auc": 0.5,
+    "average_precision": 0.06779661016949153,
+    "brier_score": 0.07068059494984433,
+    "precision_at_0_5": 0.0,
+    "recall_at_0_5": 0.0,
+    "confusion_matrix_tn_fp_fn_tp": [
+      55,
+      0,
+      4,
+      0
+    ]
+  },
+  "versions": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pyarrow": "25.0.0"
+  }
+}

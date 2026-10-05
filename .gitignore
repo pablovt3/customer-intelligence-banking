@@ -1,0 +1,43 @@
+# Environment variables: publish only the reviewed example
+.env
+.env.*
+!.env.example
+
+# Local credentials, cloud configuration and private keys
+.aws/
+.azure/
+.gcloud/
+.ssh/
+.netrc
+.pypirc
+.pgpass
+credentials.json
+credentials.*.json
+service-account*.json
+service_account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Virtual environments
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# Copia local del EDA en español
+/notebooks/01_eda_es.ipynb
